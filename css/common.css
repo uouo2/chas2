@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Kudryashev";
+    src: url(../font/fontspring-demo-kds45.otf);
+    font-weight: 100;
+
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-SemiBold.otf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+nav {
+    position: fixed;
+    z-index: 20;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: show 1.1s;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.submenu li:hover {
+    background-color: #4A5942;
+    color: #fff;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.submenu li {
+    width: 120px;
+    font-size: 14px;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.navwrap {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0 60px;
+    align-items: center;
+    gap: 320px;
+    font-family: "Crimson Text";
+    width: 100%;
+    height: 135px;
+    position: fixed;
+    background-color: #fff;
+    overflow: visible;
+}
+
+.navwrap.long {
+    height: 215px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+    transition: all .6s;
+}
+
+.navwrap.long .submenu {
+    display: block;
+}
+
+.mainlogo {
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+.mainlogoa {
+    display: none;
+    cursor: pointer;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.navwrap.size {
+    height: 70px;
+}
+
+.navwrap.size.long {
+    height: 140px;
+    padding-bottom: 70px;
+}
+
+.navwrap .mainmenu {
+    position: relative;
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    margin-left: -6px;
+    font-size: 20px;
+}
+
+.mainmenu li {
+    position: relative;
+    list-style: none;
+}
+
+.mainmenu>li a:hover {
+    color: #4A5942;
+}
+
+.last-nav {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.last-nav img {
+    margin-top: 10px;
+}
+
+.last-nav div:hover {
+    opacity: 0.8;
+}
+
+.last-nav.size {
+    transform: scale(0.75);
+
+}
+
+
+/* 텍스트 드래그, 블록 */
+::selection {
+    background-color: #58684E;
+    color: #fff;
+}

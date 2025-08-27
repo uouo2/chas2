@@ -1,0 +1,50 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+
+@font-face {
+    font-family: "ZCOOL";
+    src: url(../font/ZCOOLKuaiLe-Regular.ttf);
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ZCOOL";
+    font-size: 400px;
+    letter-spacing: 6px;
+    overflow: hidden;
+}
+
+.water-fill {
+    animation: wave 0.7s infinite linear,
+        fill-up 9s 5s infinite ease-out alternate;
+}
+
+@keyframes wave {
+    0% {
+        x: -400px;
+    }
+
+    100% {
+        x: 0;
+    }
+}
+
+
+@keyframes fill-up {
+    0% {
+        transform: scale(3);
+        height: 0;
+        y: 130px;
+    }
+
+    100% {
+        transform: scale(3);
+        height: 160px;
+        y: -30px;
+    }
+}

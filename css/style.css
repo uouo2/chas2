@@ -1,0 +1,1321 @@
+@charset "utf-8";
+
+/* 공통 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 텍스트 드래그, 블록 */
+::selection {
+    background-color: #58684E;
+    color: #fff;
+}
+
+/* 폰트 - 링크 */
+@font-face {
+    font-family: "Kudryashev";
+    src: url(../font/fontspring-demo-kds45.otf);
+    font-weight: 100;
+
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-SemiBold.otf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mile Heights";
+    src: url(../font/mileheights-freepersonaluse.otf);
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 폰트 - 다운로드 */
+
+@font-face {
+    font-family: "Eulyoo1945-SemiBold";
+    src: url('../font/Eulyoo1945-Regular.otf');
+}
+
+@font-face {
+    font-family: "Eulyoo1945-Regular";
+    src: url('../font/Eulyoo1945-Regular.otf');
+}
+
+@font-face {
+    font-family: "mileheights";
+    src: url(../font/mileheights-freepersonaluse.otf);
+}
+
+@font-face {
+    font-family: "Paperlogy-4Regular";
+    src: url(../font/Paperlogy-4Regular.ttf);
+}
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url(../font/Pretendard-Regular.otf);
+}
+
+@font-face {
+    font-family: "Kudryashev";
+    src: url(../font/fonnts.com-Kudryashev_Display_Contrast_Sans.otf);
+}
+
+@font-face {
+    font-family: "Kudryashev_Extra";
+    src: url(../font/fonnts.com-Kudryashev_Display_Extra_Contrast_Sans.otf);
+}
+
+@font-face {
+    font-family: "ZCOOL";
+    src: url(../font/ZCOOLKuaiLe-Regular.ttf);
+}
+
+/* --------- 헤더 = common.css--------- */
+
+/* --------- 섹션01 --------- */
+.section01 {
+    background-image: url(../img/섹션01/section\ bg.png);
+    background-size: 100%;
+    width: 100%;
+    height: 910px;
+    position: relative;
+}
+
+.section01text {
+    font-size: 30px;
+    font-family: "elEulyoo1945";
+    z-index: 1;
+}
+
+.texta {
+    position: absolute;
+    top: 30%;
+    width: 0;
+    left: 137px;
+    overflow: hidden;
+    color: #4A5942;
+    font-weight: 100;
+    animation: taza 1.5s steps(32, end) 1s forwards;
+}
+
+.textaaa {
+    position: absolute;
+    top: 35%;
+    left: 137px;
+    width: 0;
+    color: #4A5942;
+    font-weight: 100;
+    overflow: hidden;
+    animation: tazaa 1.5s steps(32, end) 3.2s forwards;
+}
+
+@keyframes taza {
+    from {
+        height: 34px;
+        width: 0;
+    }
+
+    to {
+        height: 34px;
+        width: 700px;
+    }
+}
+
+@keyframes tazaa {
+    from {
+        height: 34px;
+        width: 0;
+    }
+
+    to {
+        height: 34px;
+        width: 500px;
+    }
+}
+
+.textb {
+    position: absolute;
+    top: 70%;
+    left: 1400px;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    animation: tazab 1.5s steps(34, end) 5.5s forwards;
+}
+
+@keyframes tazab {
+    from {
+        height: 34px;
+        width: 0;
+    }
+
+    to {
+        height: 34px;
+        width: 340px;
+    }
+}
+
+.textbbb {
+    position: absolute;
+    top: 75%;
+    left: 1400px;
+    color: #fff;
+    font-weight: 100;
+
+    font-weight: 100;
+    width: 0;
+    overflow: hidden;
+    animation: tazabb 1.5s steps(32, end) 7.5s forwards;
+}
+
+@keyframes tazabb {
+    from {
+        height: 34px;
+        width: 0;
+    }
+
+    to {
+        height: 34px;
+        width: 320px;
+    }
+}
+
+.scroll {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    text-align: center;
+    z-index: 5;
+    cursor: pointer;
+
+}
+
+.scroll p {
+    font-family: "crimson text";
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.scroll img {
+    animation: scroller 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes scroller {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* --------- 섹션02 --------- */
+
+.guide {
+    width: 322px;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    translate: -50%;
+    z-index: 99;
+}
+
+.gotop {
+    width: 54px;
+    height: 141px;
+    background: url('../img/section02/gotop.png') no-repeat center/contain;
+    position: fixed;
+    right: 80px;
+    bottom: 30px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+    right: 35px;
+    transition: all 0.1s;
+}
+
+.section02 {
+    width: 100vw;
+    height: 1540px;
+    border-radius: 50% 50% 0 0;
+    padding-top: 150px;
+    background-color: #fff;
+}
+
+.brand-name {
+    width: 330px;
+    height: 330px;
+    background: url('../img/section02/brand-name.png') no-repeat center/contain;
+    margin: 50px auto 0;
+}
+
+.cha-mood {
+    width: 1200px;
+    height: 915px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.section02-inner {
+    width: 400px;
+    height: 900px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section02-inner .hanja {
+    width: 400px;
+    height: 370px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.symbol img,
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.symbol img {
+    z-index: 9;
+}
+
+.grass img {
+    position: absolute;
+    top: 70px;
+    left: 605px;
+}
+
+.people img {
+    position: absolute;
+    top: 178px;
+}
+
+.tree img {
+    position: absolute;
+    top: 280px;
+    left: -205px;
+}
+
+.grass img.move {
+    animation: grass 2s 0.7s forwards;
+}
+
+.tree img.move {
+    animation: tree 2s 0.7s forwards;
+}
+
+@keyframes grass {
+    0% {
+        left: 605px;
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+@keyframes tree {
+    0% {
+        left: -205px;
+    }
+
+    100% {
+        left: 205px;
+    }
+}
+
+.section02-inner {
+    position: relative;
+}
+
+.section02-inner .hanja .circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #E2D9D2;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.section02-inner .keyword {
+    font-family: "Paperlogy-4Regular";
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 280px;
+    opacity: 0;
+}
+
+.section02-inner .keyword.move {
+    animation: keyword 2.5s 0.7s forwards;
+}
+
+@keyframes keyword {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+.section02-inner:nth-child(1) .animate__slideInDown {
+    animation-delay: 2s;
+    animation-duration: 3s;
+}
+
+.section02-inner:nth-child(2) .animate__slideInDown {
+    animation-delay: 2.2s;
+    animation-duration: 3s;
+}
+
+.section02-inner:nth-child(3) .animate__slideInDown {
+    animation-delay: 2.4s;
+    animation-duration: 3s;
+}
+
+.section02-inner .line {
+    width: 2px;
+    background-color: #E2D9D2;
+    margin: 38px auto;
+    position: absolute;
+    top: 520px;
+}
+
+.section02-inner .line.move {
+    animation: first-line 1s 3.2s linear forwards;
+}
+
+@keyframes first-line {
+    0% {
+        padding-bottom: 0;
+    }
+
+    100% {
+        padding-bottom: 173.5px;
+    }
+}
+
+.section02-inner .text {
+    font-family: "Pretendard-Regular";
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    opacity: 0;
+}
+
+.section02-inner .text.move {
+    animation: keytext 2s 4s forwards;
+}
+
+@keyframes keytext {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+/* --------- 섹션03 --------- */
+
+.section03 {
+    margin-top: 285px;
+    position: relative;
+
+}
+
+.section03 .yeon-title {
+    width: 300px;
+    margin: 0 auto;
+    font-family: "Eulyoo1945-Regular";
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+
+.yeon-title span {
+    width: 55px;
+    height: 1.2px;
+    background-color: #333;
+    margin-top: 18px;
+}
+
+.section03 .text {
+    font-family: "Eulyoo1945-Regular";
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+}
+
+.section03-upper .text:nth-child(1) {
+    font-size: 30px;
+    margin-bottom: 67px;
+}
+
+.section03-upper .text:nth-child(6) {
+    line-height: 45px;
+    translate: 0 -80px;
+}
+
+.section03-lower .text:last-child {
+    line-height: 45px;
+}
+
+.sun-moon {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+.moon {
+    width: 223px;
+    height: 223px;
+    background: url('../img/section03/moon.png')no-repeat center/contain;
+    cursor: pointer;
+}
+
+.moon.on {
+    width: 223px;
+    height: 223px;
+    background: url('../img/section03/sun.png') no-repeat center/contain;
+    cursor: pointer;
+}
+
+.sun {
+    width: 223px;
+    height: 223px;
+    background: url('../img/section03/sun.png') no-repeat center/contain;
+    cursor: pointer;
+}
+
+.sun.off {
+    width: 223px;
+    height: 223px;
+    background: url('../img/section03/moon.png')no-repeat center/contain;
+    cursor: pointer;
+}
+
+/* 클릭 유도 파동 애니메이션 */
+body {
+    -webkit-animation: chameleon 19s infinite;
+    animation: chameleon 19s infinite;
+}
+
+.outline {
+    position: absolute;
+    left: 118px;
+    top: 115px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.waves {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.4);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.waves:before,
+.waves:after {
+    content: "";
+    position: absolute;
+    background: white;
+    margin-left: -12px;
+    margin-top: -12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-animation: wave 3s infinite linear;
+    animation: wave 3s infinite linear;
+}
+
+.waves:after {
+    opacity: 0;
+    -webkit-animation: waveclick 3s 1.5s infinite linear;
+    animation: waveclick 3s 1.5s infinite linear;
+}
+
+@-webkit-keyframes waveclick {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(3.5);
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+@keyframes waveclick {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(3.5);
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+.big-title {
+    font-family: "mileheights";
+    font-size: 150px;
+    line-height: 115px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: -110px;
+    z-index: 9;
+}
+
+.mockup-slide {
+    width: 718px;
+    position: relative;
+    margin: 0 auto;
+    translate: 0 -200px;
+}
+
+.section03-upper .slide0 {
+    width: 596px;
+    height: 701px;
+    margin: 0 auto;
+    background-color: #E2D9D2;
+    border-radius: 25%;
+
+}
+
+.section03-upper .slide1 {
+    width: 718px;
+    height: 884px;
+    background: url('../img/section03/slide10.png') no-repeat center/contain;
+    position: absolute;
+    top: -40px;
+    right: 20px;
+}
+
+.section03-upper .slide2 {
+    width: 718px;
+    height: 884px;
+    background: url('../img/section03/slide20.png') no-repeat center/contain;
+    position: absolute;
+    top: -70px;
+    right: 20px;
+    display: none;
+}
+
+.section03-lower {
+    padding-top: 250px;
+    z-index: 9;
+    margin-bottom: -270px;
+}
+
+.section03-lower .text {
+    position: absolute;
+    position: relative;
+    bottom: 400px;
+    left: 50%;
+    translate: -50%;
+}
+
+/* 차 배너 */
+
+.text_mask {
+    fill: #E8E4DA;
+    transform: scale(3);
+}
+
+.cha-banner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ZCOOL";
+    font-size: 400px;
+    letter-spacing: 6px;
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.water-fill {
+    animation: wave 1s infinite linear,
+        fill-up 7s infinite ease-in-out alternate;
+}
+
+@keyframes wave {
+    0% {
+        x: -400px;
+    }
+
+    100% {
+        x: 0;
+    }
+}
+
+
+@keyframes fill-up {
+    0% {
+        transform: scale(3);
+        height: 0;
+        y: 130px;
+    }
+
+    100% {
+        transform: scale(3);
+        height: 160px;
+        y: -30px;
+    }
+}
+
+.drop {
+    width: 80px;
+    height: 200px;
+    background: url('../img/section03/drop.svg') no-repeat center/contain;
+    fill: #E8E4DA !important;
+    z-index: 99;
+    position: absolute;
+    bottom: 24%;
+    left: 50%;
+    translate: -50% -90px;
+    mix-blend-mode: hue;
+}
+
+.drop.ani {
+    animation: droptap 5s 1s forwards;
+}
+
+@keyframes droptap {
+    0% {
+        translate: -50% -90px;
+        opacity: 1;
+        fill: #E8E4DA;
+    }
+
+    100% {
+        translate: -50% 25px;
+        opacity: 0;
+        fill: #E8E4DA !important;
+    }
+
+}
+
+.section03-lower svg {
+    fill: #000;
+}
+
+.section03bg {
+    width: 100vw;
+    height: 1316px;
+    background: url('../img/section03/secion3bg.png') no-repeat center/cover;
+    position: absolute;
+    top: 540px;
+    z-index: -1;
+}
+
+
+/* --------- 섹션04 --------- */
+.section04 {
+    background-color: #F0EDE6;
+    width: 100%;
+    height: 100%;
+    font-family: "elEulyoo1945";
+    overflow-x: hidden;
+    color: #222;
+}
+
+.section04 .yeon-title {
+    width: 300px;
+    margin: 0 auto;
+    font-family: "Eulyoo1945-Regular";
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+
+.typo-img {
+    width: 400px;
+    margin-top: -20px;
+    padding-left: -200px;
+}
+
+.typoaimg.ani {
+    animation: circle-ro 4s forwards .1s;
+}
+
+.typo-img.ani {
+
+    animation: circle-tr 4s forwards .1s;
+}
+
+/* .typo-circle.animation{
+    animation:  circle-tr 3s forwards;
+} */
+/* .typo-circle img.animation{
+        animation:circle-ro 3s forwards;
+} */
+
+/* .typo-circle img {
+    animation: circle-ro 3s forwards;
+
+} */
+
+
+@keyframes circle-tr {
+    from {
+        transform: translateX(0px);
+
+    }
+
+    to {
+        transform: translateX(70%);
+    }
+}
+
+@keyframes circle-ro {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.section04-title div {
+    margin-top: 4px;
+}
+
+.section04-title h4 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.section04-typo {
+    width: 100%;
+    height: 100%;
+    padding: 120px 0;
+}
+
+.typowrap {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.typoa {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.typoa h1 {
+    font-family: "Kudryashev";
+    font-size: 150px;
+    font-weight: 100;
+}
+
+.typob {
+    overflow-y: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1;
+    margin-top: -90px;
+}
+
+.typob h1 {
+    letter-spacing: -3.5px;
+    justify-content: center;
+    font-family: "Kudryashev";
+    font-size: 150px;
+    font-weight: 100;
+}
+
+.typob .typo-blink {
+    width: 520px;
+    height: 140px;
+    margin-top: -20px;
+    line-height: 150px;
+    padding-top: 10px;
+    color: #fff;
+    border-right: 3px solid white;
+    text-align: left;
+    background-color: black;
+}
+
+.black {
+    align-items: center;
+    display: flex;
+
+}
+
+.typo-blink h1 {
+    box-sizing: border-box;
+    font-size: 99px;
+    text-align: center;
+
+    overflow: hidden;
+
+    width: 0;
+    margin-left: 30px;
+    height: 120px;
+
+
+}
+
+.typoh.ani {
+    animation: typo 1.2s steps(9, end) 1.1s forwards, blink .7s infinite;
+}
+
+
+
+@keyframes typo {
+    from {
+        width: 120px;
+
+    }
+
+    to {
+        width: 460px;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+
+        border-right: 4px solid white;
+
+
+    }
+
+    50% {
+        border-right: 4px solid transparent;
+    }
+}
+
+
+/* --------- 섹션05 --------- */
+.section05 {
+    overflow-x: hidden;
+    background-color: #F0EDE6;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+}
+
+/* 원 문자  */
+.content-bg {
+    height: 120rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.content-bg::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120rem;
+    height: 120rem;
+    background: url('../img/섹션05/원문자.png') no-repeat center/contain;
+    transform: translate(-50%, -50%);
+    animation: spin 150s linear infinite;
+    z-index: -1;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* 컨텐트 위치 */
+.content-left-wrap {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.more {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.content-left-wrap .content:nth-child(2) {
+    margin-top: 25%;
+}
+
+.content {
+    width: 30%;
+    height: 35%;
+    position: absolute;
+}
+
+/* 컨텐트 공통 */
+.content h1 {
+    font-size: 6rem;
+    font-family: "Mile Heights";
+    font-weight: 400;
+}
+
+.content p {
+    font-size: 1.7rem;
+    font-family: "elEulyoo1945";
+    font-weight: 400;
+    line-height: 0.7;
+}
+
+.content span a {
+    font-family: "Paperlogy-4Regular";
+    font-size: 1.6rem;
+}
+
+/* 컨텐트 left */
+.content-left-wrap span {
+    display: block;
+    margin-top: 80px;
+}
+
+.content-left-wrap span img {
+    width: 8rem;
+    margin-left: 9px;
+    transition: all 0.5s;
+}
+
+.content-left-wrap span:hover img {
+    transform: translateX(5rem);
+}
+
+.content-left-wrap h1 {
+    margin-bottom: 55px;
+}
+
+.content-left-wrap p {
+    margin-bottom: 20px;
+}
+
+/* 컨텐트 more */
+.more img {
+    width: 930px;
+    height: 610px;
+    position: relative;
+    top: -12.5rem;
+    left: -18.5rem;
+}
+
+.more h1 {
+    text-align: center;
+    position: relative;
+    left: -7.5rem;
+    margin-bottom: 15px;
+    font-size: 120px;
+}
+
+.more h1:nth-child(2) {
+    position: relative;
+    top: -3rem;
+}
+
+.more p {
+    position: relative;
+    top: -16rem;
+    left: -8rem;
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 1.4rem;
+}
+
+.more span {
+    position: relative;
+    bottom: 14rem;
+    left: 5rem;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    padding: 1rem 3.5rem 0.5rem;
+    transition: all 0.5s;
+}
+
+.more span:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+/* --------- 섹션06 --------- */
+.section06 {
+    background-color: #F0EDE6;
+    position: relative;
+    width: 100%;
+    padding-top: 10rem;
+    height: 1050px;
+}
+
+.section06 p {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    font-family: "elEulyoo1945";
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.section06 .img-wrap {
+    width: 70%;
+    margin: 150px auto 0;
+    height: 40rem;
+}
+
+.section06 .img-wrap .bg-img {
+    position: relative;
+}
+
+.section06 .img-wrap .bg-img img {
+    width: 500px;
+    opacity: 0;
+}
+
+.section06 .img-wrap .bg-img img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 320px;
+}
+
+.section06 .img-wrap .bg-img img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 320px;
+}
+
+.section06 .img-wrap .content-img {
+    position: relative;
+    margin-top: 5rem;
+}
+
+.section06 .img-wrap .content-img img {
+    width: 350px;
+    height: 430px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.section06 .img-wrap .content-img.content-img3 img {
+    width: 310px;
+    height: 410px;
+}
+
+/* 이미지 열리기 */
+
+.content-img {
+    transition: transform 2s ease;
+}
+
+.bg-img img {
+    transition: transform 2.2s ease;
+}
+
+.img-wrap:hover .content-img2 {
+    transform: translateX(300px);
+    cursor: pointer;
+}
+
+.img-wrap:hover .content-img1 {
+    transform: translateX(-300px);
+    cursor: pointer;
+}
+
+.img-wrap:hover .content-img3 {
+    cursor: pointer;
+    transform: translateY(-50px);
+}
+
+.img-wrap:hover .bg-img img:nth-child(1) {
+    transform: translateX(-280px);
+}
+
+.img-wrap:hover .bg-img img:nth-child(2) {
+    transform: translateX(280px);
+}
+
+
+/* 하단슬라이드 */
+.swiper {
+    background-color: #fff;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.swiper .swiper-wrapper {
+    transition-timing-function: linear;
+    display: flex;
+    height: 5rem;
+    width: 100%;
+}
+
+.swiper-slide {
+    font-family: "Mile Heights";
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    white-space: nowrap;
+    width: 100%;
+    color: #4A5942;
+}
+
+.swiper-slide {
+    cursor: pointer;
+}
+
+
+/* --------- 푸터 --------- */
+footer {
+    background-color: #4A5942;
+    color: #E2D9D2;
+    width: 100%;
+}
+
+footer p {
+    padding-bottom: 10px;
+    font-family: "Pretendard-Regular";
+}
+
+footer .footer-wrap {
+    width: 1800px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.footer-top,
+.footer-flex,
+.flex-left,
+.flex-right {
+    display: flex;
+}
+
+.footer-top a {
+    padding-right: 50px;
+    padding-top: 40px;
+    transition: all 1s;
+}
+
+.footer-mid {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.footer-logo {
+    width: 70px;
+    height: 120px;
+}
+
+.flex-left,
+.flex-right {
+    flex-direction: column;
+}
+
+.flex-left {
+    justify-content: space-around;
+    width: 150px;
+}
+
+.flex-right {
+    justify-content: space-around;
+    width: 450px;
+}
+
+.sns {
+    margin-left: 93%;
+}
+
+.sns img {
+    margin-left: 10px;
+}
+
+.copy {
+    padding: 20px 0;
+    display: block;
+    width: 400px;
+    margin-left: 80%;
+}

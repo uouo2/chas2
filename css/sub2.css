@@ -1,0 +1,656 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* 폰트 - 링크 */
+
+@font-face {
+    font-family: "Mile Heights";
+    src: url(../font/mileheights-freepersonaluse.otf);
+}
+
+@font-face {
+    font-family: "Kudryashev";
+    src: url(../font/fontspring-demo-kds45.otf);
+    font-weight: 100;
+
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-SemiBold.otf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kudryashev";
+    src: url(../font/fontspring-demo-kds45.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-SemiBold.otf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* 폰트 - 다운로드 */
+@font-face {
+    font-family: "Eulyoo1945-SemiBold";
+    src: url(../font/Eulyoo1945-Regular.otf);
+}
+
+@font-face {
+    font-family: "Eulyoo1945-Regular";
+    src: url(../font/Eulyoo1945-Regular.otf);
+}
+
+@font-face {
+    font-family: "mileheights";
+    src: url(../font/mileheights-freepersonaluse.otf);
+}
+
+@font-face {
+    font-family: "Paperlogy-4Regular";
+    src: url(../font/Paperlogy-4Regular.ttf);
+}
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url(../font/Pretendard-Regular.otf);
+}
+
+@font-face {
+    font-family: "Kudryashev";
+    src: url(../font/fonnts.com-Kudryashev_Display_Contrast_Sans.otf);
+}
+
+@font-face {
+    font-family: "Kudryashev_Extra";
+    src: url(../font/fonnts.com-Kudryashev_Display_Extra_Contrast_Sans.otf);
+}
+
+@font-face {
+    font-family: "ZCOOL";
+    src: url(../font/ZCOOLKuaiLe-Regular.ttf);
+}
+
+@font-face {
+    font-family: "HeirofLightBold";
+    src: url(../font/HeirofLightBold.ttf);
+}
+
+@font-face {
+    font-family: "Kudryashev";
+    src: url(../font/fontspring-demo-kds45.otf);
+    font-weight: 100;
+
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "elEulyoo1945";
+    src: url(../font/Eulyoo1945-SemiBold.otf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+nav {
+    position: fixed;
+    z-index: 20;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: show 1.1s;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.submenu li:hover {
+    background-color: #4A5942;
+    color: #fff;
+}
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.submenu li {
+    width: 120px;
+    font-size: 14px;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.navwrap {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0 60px;
+    align-items: center;
+    gap: 320px;
+    font-family: "Crimson Text";
+    width: 100%;
+    height: 135px;
+    position: fixed;
+    overflow: visible;
+}
+
+.navwrap.scrolled {
+    background-color: #fff;
+}
+
+.navwrap.long {
+    height: 215px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+    transition: all .6s;
+}
+
+.navwrap.long .submenu {
+    display: block;
+}
+
+.mainlogo {
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+.mainlogoa {
+    display: none;
+    cursor: pointer;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.navwrap.size {
+    height: 70px;
+}
+
+.navwrap.size.long {
+    height: 140px;
+    padding-bottom: 70px;
+}
+
+.navwrap .mainmenu {
+    position: relative;
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    margin-left: -6px;
+    font-size: 20px;
+}
+
+.mainmenu li {
+    position: relative;
+    list-style: none;
+}
+
+.mainmenu>li a:hover {
+    color: #4A5942;
+}
+
+.last-nav {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.last-nav img {
+    margin-top: 10px;
+}
+
+.last-nav div:hover {
+    opacity: 0.8;
+}
+
+.last-nav.size {
+    transform: scale(0.75);
+
+}
+
+
+/* 텍스트 드래그, 블록 */
+::selection {
+    background-color: #58684E;
+    color: #fff;
+}
+
+/* 서브타이틀 공통 */
+.sub-title {
+    padding-left: 80px;
+}
+
+.sub-title .s-title1 {
+    font-size: 5.6rem;
+    font-weight: 100;
+    font-family: "Mile Heights";
+    color: #4A5C44;
+    margin-bottom: 15px;
+}
+
+.sub-title .s-title2 {
+    font-size: 7rem;
+   font-family: "elEulyoo1945";
+    color: #738964;
+    letter-spacing: -2px;
+    font-weight: 300;
+}
+
+
+
+/* 섹션1 */
+.section01 {
+    width: 120rem;
+    height: 67.5rem;
+    position: relative;
+}
+
+.section01-bg {
+    position: absolute;
+    top: -120px;
+    background: url(../sub2img/section1/mainbg.png) no-repeat center center / cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 100px 100px;
+}
+
+.section01 .maintext h1 {
+    font-family: "Mile Heights";
+    font-weight: 100;
+    font-size: 200px;
+    color: #fff;
+}
+
+.section01 .maintext {
+    padding-top: 200px;
+}
+
+.section01 .maintext div:nth-child(1) {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+.section01 .maintext div:nth-child(2) {
+    position: absolute;
+    top: 65%;
+    right: 5%;
+}
+
+/* 섹션2 */
+.section02 {
+    width: 1920px;
+    height: 1300px;
+
+}
+
+.section02-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.section02-p {
+    position: absolute;
+    font-family: "elEulyoo1945";
+    top: 50%;
+    left: 10%;
+}
+
+.section02-p p {
+    font-size: 26px;
+    line-height: 60px;
+}
+
+.section02-p p:nth-child(1) {
+    color: #738964;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.section02-right {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.section02-right img:nth-child(1) {
+    width: 700px;
+    position: absolute;
+    top: 7%;
+    right: 2%;
+}
+
+.section02-right img:nth-child(2) {
+    width: 1200px;
+    position: absolute;
+    top: -15%;
+    right: -20%;
+    animation: spin 50s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 섹션 2-3 사이 */
+
+.water {
+    position: relative;
+    margin-top: 250px;
+    width: 100vw;
+    height: 300px;
+}
+
+.water img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: water 5s linear infinite;
+}
+
+@keyframes water {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* 섹션 4 */
+.section04 {
+    margin: 0 80px;
+    width: 120rem;
+    height: 67.5rem;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.sectionwrap {
+    margin-right: 80px;
+    display: flex;
+    gap: 200px;
+    flex-direction: row;
+}
+
+.section04 .maintext h1 {
+    font-family: "Mile Heights";
+    font-weight: 100;
+    font-size: 5.6rem;
+    color: #4A5C44;
+}
+
+.section04 .maintext {
+    padding-top: 200px;
+}
+
+.section04 .maintext h2 {
+    font-family: "elEulyoo1945";
+    color: #738964;
+    font-size: 7rem;
+    font-weight: 400;
+}
+
+.section04-p {
+    font-family: "elEulyoo1945";
+    color: #000;
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: 100px;
+    margin-left: 100px;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+.set {
+    width: 750px;
+    position: relative;
+    z-index: 6;
+    top: 350px;
+    left: 100px;
+
+}
+
+.set img {
+    position: absolute;
+    width: 100%;
+
+}
+
+.greenwater {
+
+    position: relative;
+    width: 1000px;
+    margin-top: 200px;
+    animation: greenu 7s ease-in-out;
+}
+
+@keyframes greenu {
+    from {
+        opacity: 0.;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.greenwater img {
+
+    position: absolute;
+    rotate: 180deg;
+    width: 100%;
+
+}
+
+/* 섹션 5 */
+    .section05 {
+        width: 100vw;
+        height: 80vh;
+        background-color: #293820;
+        position: relative;
+        background: url(../sub2img/section5/tree.png) no-repeat center/cover;
+    }
+    .section05-wrap {
+        width: 80%;
+        height: 65%;
+        background-color: #cfe9c433;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .section05 h4,
+    .section05 h1,
+    .section05 p {
+        color: #fff;
+        text-align: center;
+    }
+    .section05 h4,
+    .section05 p {
+        font-family: "Pretendard-Regular";
+    }
+
+    .section05 h4 {
+        margin-top: 60px;
+        font-size: 20px;
+    }
+    .section05 h1 {
+        margin-top: 30px;
+        margin-bottom: 80px;
+        font-family: "elEulyoo1945";
+        font-size: 40px;
+        font-weight: 300;
+    }
+    .section05 p {
+        line-height: 40px;
+        font-size: 20px;
+    }
+    .detail {
+        display: flex;
+        position: absolute;
+        left: 34%;
+        margin-top: 4%;
+    }
+    .detail img {
+        width: 15px; height: 15px;
+        margin: 14px 30px  14px 30px;
+    } 
+    .section05 .re {
+        width: 200px;
+        position: absolute;
+        right: 5%;  bottom: 5%;
+    }
+
+/* --------- 푸터 --------- */
+footer {
+    background-color: #4A5942;
+    color: #E2D9D2;
+    width: 100%;
+}
+
+footer p {
+    padding-bottom: 10px;
+    font-family: "Pretendard-Regular";
+}
+
+footer .footer-wrap {
+    width: 1800px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.footer-top,
+.footer-flex,
+.flex-left,
+.flex-right {
+    display: flex;
+}
+
+.footer-top a {
+    padding-right: 50px;
+    padding-top: 40px;
+    transition: all 1s;
+}
+
+.footer-mid {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.footer-logo {
+    width: 70px;
+    height: 120px;
+}
+
+.flex-left,
+.flex-right {
+    flex-direction: column;
+}
+
+.flex-left {
+    justify-content: space-around;
+    width: 150px;
+}
+
+.flex-right {
+    justify-content: space-around;
+    width: 450px;
+}
+
+.sns {
+    margin-left: 93%;
+}
+
+.sns img {
+    margin-left: 10px;
+}
+
+.copy {
+    padding: 20px 0;
+    display: block;
+    width: 400px;
+    margin-left: 80%;
+}
